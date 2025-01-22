@@ -4,18 +4,16 @@ body, html {
     height: 100%;
     overflow: hidden;
     background-color: #f0f0f0;
-  }
-  
-  .car-container {
+}
+.car-container {
     position: absolute;
     left: 0;
     bottom: 20px;
-    width: 200px;
+    width: 200px;  
     height: 50px;
-    animation: moveCar 5s ease-in-out infinite;
-  }
-  
-  .car {
+    animation: moveCar 5s ease-out forwards; 
+}
+.car {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -23,9 +21,8 @@ body, html {
     background-color: #005e9c;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .headlights {
+}
+.headlights {
     position: absolute;
     top: 10px;
     left: 150px;
@@ -33,61 +30,51 @@ body, html {
     height: 10px;
     display: flex;
     justify-content: space-between;
-  }
-  
-  .headlight {
+}
+.headlight {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: #fff;
     animation: headlightsGlow 1s infinite alternate;
-  }
-  
-  .wheels {
+}
+.wheels {
     position: absolute;
     bottom: -15px;
     left: 10px;
     width: 180px;
     display: flex;
     justify-content: space-between;
-  }
-  
-  .wheel {
+}
+.wheel {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: #3b3f42;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     animation: rotateWheels 1s linear infinite;
-  }
-  
-  @keyframes moveCar {
+}
+@keyframes moveCar {
     0% {
-      left: -200px;
-    }
-    50% {
-      left: calc(100% - 250px);
+        left: -200px; 
     }
     100% {
-      left: -200px;
+        left: calc(100% - 200px); 
     }
-  }
-  
-  @keyframes rotateWheels {
+}
+@keyframes rotateWheels {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  @keyframes headlightsGlow {
+}
+@keyframes headlightsGlow {
     0% {
-      background-color: #fff;
+        background-color: #fff;
     }
     100% {
-      background-color: #f1c40f;
+        background-color: #f1c40f;
     }
-  }
-  
+}
